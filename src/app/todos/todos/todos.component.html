@@ -1,1 +1,14 @@
-<p>todos works!</p>
+<mat-card>
+  <mat-card-header>
+      <mat-form-field>
+        <mat-label>Add todo</mat-label>
+        <input matInput type="text" [(ngModel)]="addTodoTitle"/>
+        <button *ngIf="addTodoTitle" mat-button mat-icon-button matSuffix (click)="onAddTodo(addTodoTitle)">
+          <mat-icon>check</mat-icon>
+        </button>
+      </mat-form-field>
+  </mat-card-header>
+  <mat-list>
+    <app-todos-item *ngFor="let todo of todos; trackBy: trackByTodos" [todo]="todo" (deleteTodo)="deleteTodo($event)"></app-todos-item>
+  </mat-list>
+</mat-card>

@@ -1,0 +1,7 @@
+<mat-list-item>
+  <mat-checkbox color="primary" [checked]="todo.completed" (change)="onToggle($event, todo)"></mat-checkbox>
+  <span class="todo-item-text" [ngClass]="setClasses()">{{ todo.title }}</span>
+  <button mat-icon-button (click)="onDelete(todo)">
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-list-item>
