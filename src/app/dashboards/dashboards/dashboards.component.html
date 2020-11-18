@@ -1,1 +1,14 @@
-<p>dashboards works!</p>
+<div *ngIf="forecastLoading">
+  <h2>...Loading</h2>
+</div>
+<div *ngIf="forecastError">
+  <h2>Something goes wrong; try again later</h2>
+</div>
+<div *ngIf="hasDataToShow">
+  <button mat-raised-button [disabled]="charts.length === 4" color="primary" (click)="openAddDialog()">Add chart
+  </button>
+  <div class="dashboards">
+    <app-dashboards-chart *ngFor="let chart of charts" [data]="chart"></app-dashboards-chart>
+  </div>
+</div>
+

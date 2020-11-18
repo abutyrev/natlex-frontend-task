@@ -1,0 +1,11 @@
+:host {
+  max-width: 100%;
+  width: 100%;
+}
+
+.dashboards {
+  display: flex;
+  flex-flow: row wrap;
+  margin-right: -10px;
+  margin-left: -10px;
+}

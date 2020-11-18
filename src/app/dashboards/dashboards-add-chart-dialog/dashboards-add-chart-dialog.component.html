@@ -1,0 +1,22 @@
+<h2 mat-dialog-title>Add chart</h2>
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>
+      Sensors
+    </mat-label>
+    <mat-select [formControl]="activeSensors" multiple>
+      <mat-option *ngFor="let sensor of availableSensors" [value]="sensor.id">{{ sensor.text }}</mat-option>
+    </mat-select>
+    <mat-error *ngIf="activeSensors.invalid">Please choose at list one sensor</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Chart type</mat-label>
+    <mat-select [(ngModel)]="data.type">
+      <mat-option *ngFor="let type of availableTypes" [value]="type">{{ type }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-button (click)="onAdd()">Add</button>
+</div>

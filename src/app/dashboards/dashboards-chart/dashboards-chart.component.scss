@@ -1,0 +1,26 @@
+:host {
+  flex: 0 1 calc(50% - 20px);
+  max-width: calc(50% - 20px);
+  min-width: 470px;
+  margin: 10px;
+}
+
+.chart-box {
+  padding: 10px;
+}
+
+.chart {
+  position: relative;
+}
+
+.chart-panel {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 1044px) {
+  :host {
+    flex: 0 1 100%;
+    max-width: 100%;
+  }
+}
