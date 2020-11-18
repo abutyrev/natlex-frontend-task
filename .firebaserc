@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "natlex-frontend-task": {
+      "hosting": {
+        "natlex-frontend-task": [
+          "natlex-frontend-task"
+        ]
+      }
+    }
+  }
+}
